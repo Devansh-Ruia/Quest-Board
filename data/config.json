@@ -1,0 +1,11 @@
+{
+  "player_name": "Adventurer",
+  "narration_style": "epic_humorous",
+  "difficulty_scaling": true,
+  "auto_detect_completions": false,
+  "quest_generation_time": "08:00",
+  "timezone": "America/Los_Angeles",
+  "output_channel": "discord",
+  "model_narration": "anthropic/claude-sonnet-4-5",
+  "model_parsing": "anthropic/claude-haiku-4-5"
+}
