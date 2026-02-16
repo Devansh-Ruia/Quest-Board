@@ -100,13 +100,13 @@ def get_level_title(level: int, character_class: str = "Unclassed") -> str:
         titles = {
             1: "Novice Questgiver",
             2: "Apprentice Adventurer",
-            3: "Journeyman Hero"
+            3: "Hero"
         }
     else:
         titles = {
             1: "Novice",
             2: "Apprentice", 
-            3: "Journeyman",
+            3: "Hero",
             4: "Expert",
             5: "Master",
             6: "Adept",
@@ -142,9 +142,9 @@ def generate_narration_prompt(quest: Dict[str, Any], xp_gained: int, leveled_up:
             "The odds were against you, but you persevered. This triumph will be remembered. +{xp} XP."
         ],
         'boss': [
-            "THE BEAST HAS FALLEN! Where lesser adventurers would have fled, you stood firm and emerged victorious. The realm is safe... for now. +{xp} XP.",
-            "LEGENDARY! You have accomplished what many thought impossible. Your name will be whispered in awe throughout the land. +{xp} XP.",
-            "VICTORY! The great challenge has been overcome. You have proven yourself a true hero of epic proportions. +{xp} XP."
+            "THE BEAST IS DEAD. holy shit. +{xp} XP.",
+            "actually impossible. you did that. +{xp} XP.",
+            "VICTORY! somehow you pulled it off. +{xp} XP."
         ]
     }
     

@@ -73,27 +73,27 @@ def generate_phase_1(boss_type: str, quest: Dict[str, Any], character_sheet: Dic
     # Phase 1 templates by boss type
     phase_1_templates = {
         'deadline_dragon': [
-            f"The air grows cold as you approach the {boss_name.lower()}. Its scales shimmer with the urgency of impending due dates. You grip your weapon tightly—this will be a battle against time itself.",
-            f"The mountain lair of the {boss_name.lower()} looms before you. Smoke billows from its nostrils, each puff representing another hour slipping away. The final deadline approaches.",
-            f"You stand at the gates of the {boss_name.lower()}'s domain. The ground trembles with each step of the great beast. Your quest: {quest_name} begins now."
+            f"okay so here's the thing about this {boss_name.lower()}. it's breathing down your neck and the deadline is way too close for comfort.",
+            f"right so you're staring at the {boss_name.lower()} and thinking 'this is fine, i've got this'. you don't. but you will anyway.",
+            f"time to face the {boss_name.lower()}. the quest {quest_name} begins now. godspeed."
         ],
         'code_lich': [
-            f"The crypt of the {boss_name.lower()} beckons, filled with the skeletons of forgotten functions and variables. Your torchlight reveals ancient code that should not be. The quest {quest_name} demands your expertise.",
-            f"Deep in the digital underworld, the {boss_name.lower()} awaits. Lines of cursed code twist like writhing serpents. Only a brave programmer can cleanse this corruption.",
-            f"The {boss_name.lower()} rises from the repository of the damned. Its eyes glow with the light of a thousand syntax errors. Your quest {quest_name} has led you to this moment."
+            f"the crypt of {boss_name.lower()} is calling your name. probably because something broke again. typical.",
+            f"deep in the digital underworld, the {boss_name.lower()} awaits. your IDE is already open, isn't it. let's do this.",
+            f"the {boss_name.lower()} rises from the repository of damned. at least this time you have coffee."
         ],
         'presentation_phoenix': [
-            f"The boardroom transforms into an arena where the {boss_name.lower()} awaits. Stakeholders sit like ancient judges, their gazes piercing. Your quest {quest_name} requires more than slides—it demands courage.",
-            f"The {boss_name.lower()} spreads its wings of expectation and judgment. PowerPoint slides become your shield, your words your sword. The quest {quest_name} begins.",
-            f"In the hallowed halls of commerce, the {boss_name.lower()} circles overhead. Each beat of its wings represents another question from the executive team. Face your destiny in {quest_name}."
+            f"the boardroom transforms into an arena where the {boss_name.lower()} awaits. stakeholders looking judgy. fun.",
+            f"the {boss_name.lower()} spreads its wings of powerpoint and judgment. your slides are your sword. good luck with that.",
+            f"in the hallowed halls of commerce, the {boss_name.lower()} circles. each beat of its wings is another executive question. brace yourself."
         ]
     }
     
     # Get appropriate template or use generic
     templates = phase_1_templates.get(boss_type, [
-        f"The {boss_name.lower()} stands before you, a formidable obstacle to your quest {quest_name}. The air crackles with tension as you prepare for the confrontation ahead.",
-        f"Your journey has led you to the lair of the {boss_name.lower()}. The quest {quest_name} will test your limits and push you beyond what you thought possible.",
-        f"The path to completing {quest_name} is blocked by the mighty {boss_name.lower()}. Steel your resolve—this battle will be legendary."
+        f"the {boss_name.lower()} stands before you. this is gonna be a problem. time to deal with it for {quest_name}.",
+        f"so you're here to fight the {boss_name.lower()}. the quest {quest_name} led you to this mess. good luck.",
+        f"the path to completing {quest_name} is blocked by the {boss_name.lower()}. steel yourself. this'll be rough."
     ])
     
     narration = templates[hash(quest_name) % len(templates)]
@@ -129,19 +129,19 @@ def generate_phase_2(boss_type: str, quest: Dict[str, Any], character_sheet: Dic
     # Phase 2 templates by boss type
     phase_2_templates = {
         'deadline_dragon': [
-            f"The {boss_name.lower()} roars and the deadline suddenly moves up! Unexpected complications arise as the beast unleashes its time-warping breath. You must adapt quickly or be consumed by the temporal storm.",
-            f"Mid-battle, the {boss_name.lower()} reveals a hidden phase—additional requirements materialize out of thin air. The scope creeps like shadows at dusk, threatening to overwhelm your progress.",
-            f"The {boss_name.lower()} summons its minions: meetings, interruptions, and urgent emails. You must fight through these distractions to maintain focus on {quest_name}."
+            f"damn, the {boss_name.lower()} just got REAL angry. the deadline moved up. of course it did.",
+            f"mid-battle, the {boss_name.lower()} reveals a hidden phase—additional requirements materialize out of thin air. this just got way harder than it needed to be.",
+            f"the {boss_name.lower()} summons its minions: meetings, interruptions, and urgent emails. fight through the noise. stay focused on {quest_name}."
         ],
         'code_lich': [
-            f"The {boss_name.lower()} laughs as the codebase suddenly shifts! Dependencies break, APIs change, and the ground beneath your feet becomes unstable. Your debugging skills are put to the ultimate test.",
-            f"Unexpectedly, the {boss_name.lower()} reveals that the real problem lies deeper than you thought. The surface issues were merely symptoms of a much darker architectural corruption.",
-            f"The {boss_name.lower()} casts a spell of confusion! Your IDE crashes, documentation becomes contradictory, and your usual tools fail you. You must rely on pure programming instinct."
+            f"the {boss_name.lower()} laughs as the codebase suddenly shifts! dependencies break, APIs change, ground beneath your feet becomes unstable. classic.",
+            f"unexpectedly, the {boss_name.lower()} reveals that the real problem lies deeper than you thought. the surface issues were just the appetizer.",
+            f"the {boss_name.lower()} casts a spell of confusion! your IDE crashes, documentation becomes contradictory, and your usual tools fail you. improvise."
         ],
         'presentation_phoenix': [
-            f"The {boss_name.lower()} rises from the ashes of your first points with challenging questions! Stakeholders reveal hidden concerns and objections you never anticipated. Think fast!",
-            f"Mid-presentation, the {boss_name.lower()} transforms the meeting dynamics. Key decision-makers change their minds, new requirements emerge, and your carefully crafted narrative must adapt.",
-            f"The {boss_name.lower()} tests your resolve with technical difficulties! The projector fails, slides won't advance, and your demo environment crashes. The show must go on!"
+            f"the {boss_name.lower()} rises from the ashes of your first points with challenging questions! stakeholders reveal hidden concerns you never saw coming.",
+            f"mid-presentation, the {boss_name.lower()} transforms meeting dynamics. key decision-makers change their minds, new requirements emerge. adapt or die.",
+            f"the {boss_name.lower()} tests your resolve with technical difficulties! the projector fails, slides won't advance, and your demo environment crashes. the show must go on!"
         ]
     }
     
@@ -187,19 +187,19 @@ def generate_phase_3(boss_type: str, quest: Dict[str, Any], character_sheet: Dic
     # Phase 3 templates by boss type
     phase_3_templates = {
         'deadline_dragon': [
-            f"The final confrontation! The {boss_display_name.lower()} unleashes its ultimate attack—the last-minute rush. With adrenaline surging, you channel all your skill and experience into this final push. Victory is within reach!",
-            f"This is it—the moment of truth! The {boss_display_name.lower()} stands cornered, its power waning. One final effort will determine the fate of {quest_name}. Give it everything you've got!",
-            f"The {boss_display_name.lower()} roars its defiance, but you can see the fatigue in its movements. The quest {quest_name} reaches its climax. This final battle will decide everything!"
+            f"IT'S HAPPENING. FINAL PUSH ON THE {boss_display_name.upper()}. everything you've got, right now.",
+            f"this is it—the moment of truth! the {boss_display_name.lower()} is cornered, its power waning. one final effort will decide the fate of {quest_name}.",
+            f"the {boss_display_name.lower()} roars its defiance, but you can see fatigue in its movements. the quest {quest_name} reaches its climax. this final battle will decide everything!"
         ],
         'code_lich': [
-            f"The {boss_display_name.lower()} faces its final compilation! One last push of debugging, refactoring, and testing will determine whether the codebase is saved or doomed to eternal legacy status.",
-            f"The {boss_display_name.lower()} gathers its remaining dark energy for a final assault. Your fingers fly across the keyboard as you race against the forces of technical debt. The fate of {quest_name} hangs in the balance!",
-            f"The final merge conflict! The {boss_display_name.lower()} makes its last stand amidst conflicting branches and merge conflicts. Your git-fu will be tested as never before in {quest_name}."
+            f"the {boss_display_name.lower()} faces its final compilation! one last push of debugging, refactoring, and testing will determine whether the codebase is saved or doomed to eternal legacy status.",
+            f"the {boss_display_name.lower()} gathers its remaining dark energy for a final assault. your fingers fly across the keyboard as you race against the forces of technical debt. the fate of {quest_name} hangs in the balance!",
+            f"the final merge conflict! the {boss_display_name.lower()} makes its last stand amidst conflicting branches and merge conflicts. your git-fu will be tested like never before in {quest_name}."
         ],
         'presentation_phoenix': [
-            f"The {boss_display_name.lower()} prepares for its final rebirth! Your closing arguments, summary slides, and call to action will determine whether you emerge victorious or face the ashes of defeat.",
-            f"The Q&A from hell! The {boss_display_name.lower()} unleashes its most challenging questions yet. Your knowledge, confidence, and communication skills will be put to the ultimate test in {quest_name}.",
-            f"The final decision point! The {boss_display_name.lower()} awaits the judgment of the stakeholders. Your performance in {quest_name} reaches its dramatic conclusion."
+            f"the {boss_display_name.lower()} prepares for its final rebirth! your closing arguments, summary slides, and call to action will determine whether you emerge victorious or face the ashes of defeat.",
+            f"the Q&A from hell! the {boss_display_name.lower()} unleashes its most challenging questions yet. your knowledge, confidence, and communication skills will be put to the ultimate test in {quest_name}.",
+            f"the final decision point! the {boss_display_name.lower()} awaits the judgment of stakeholders. your performance in {quest_name} reaches its dramatic conclusion."
         ]
     }
     
@@ -229,7 +229,7 @@ def generate_phase_3(boss_type: str, quest: Dict[str, Any], character_sheet: Dic
         "challenge": f"Complete {quest_name} with your full effort and claim your victory!",
         "progress_marker": "100%",
         "victory_xp": xp_reward,
-        "victory_message": f"BOSS DEFEATED! The {boss_display_name.lower()} has fallen! +{xp_reward} XP and eternal glory!"
+        "victory_message": f"YOU DID IT AND I AM LOSING MY MIND. the {boss_display_name.lower()} is finally DEAD. +{xp_reward} XP and eternal glory."
     }
 
 def generate_boss_encounter(quest: Dict[str, Any], character_sheet: Dict[str, Any]) -> Dict[str, Any]:
